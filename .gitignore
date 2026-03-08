@@ -50,6 +50,10 @@ yarn-error.log*
 .vscode/
 .idea/
 
+# Chroma vector database
+RagSystem/chroma_db/
+*.sqlite3
+
 # ==============================
 # OS files
 # ==============================
