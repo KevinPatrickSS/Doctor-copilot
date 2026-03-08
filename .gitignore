@@ -1,0 +1,63 @@
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual Environments
+chroma_legacy/
+venv/
+env/
+ENV/
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# ==============================
+# Environment Variables
+# ==============================
+.env
+.env.*
+
+# ==============================
+# Logs
+# ==============================
+*.log
+
+# ==============================
+# Node / React
+# ==============================
+doctor-copilot/node_modules/
+node_modules/
+
+# Node build outputs
+doctor-copilot/dist/
+doctor-copilot/build/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==============================
+# IDE
+# ==============================
+.vscode/
+.idea/
+
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Project Generated Files
+# ==============================
+output/
+*.tmp

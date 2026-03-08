@@ -1,0 +1,165 @@
+{
+  "report_id": "DCR-20260130194435",
+  "timestamp": "2026-01-30T19:44:35.372635",
+  "disclaimer": "PRELIMINARY CLINICAL DECISION SUPPORT - NOT A FINAL DIAGNOSIS. Requires physician review and confirmation. Risk assessment is probabilistic and should be interpreted by qualified clinicians.",
+  "patient_summary": {
+    "age": 65,
+    "sex": "M",
+    "encounter_type": "ED",
+    "cardiology_relevant": true,
+    "relevance_score": 1.0
+  },
+  "risk_assessment": {
+    "status": "completed",
+    "rcri_score": 2,
+    "rcri_risk_class": "intermediate",
+    "rcri_event_rate": 6.6,
+    "ml_risk_probability": 0.8520602457554896,
+    "ml_risk_class": "high",
+    "overall_risk_level": "high",
+    "confidence": "moderate",
+    "recommendation": "Strongly consider cardiology consultation. May need stress testing or coronary angiography before high-risk surgery.",
+    "rcri_factors": [
+      {
+        "factor": "High-risk surgery",
+        "description": "Intraperitoneal, intrathoracic, or suprainguinal vascular"
+      },
+      {
+        "factor": "Diabetes on insulin",
+        "description": "Preoperative insulin therapy"
+      }
+    ],
+    "shap_explanation": "Factors INCREASING risk:\n  1. Maximum heart rate (value: -2.29)\n  2. Resting blood pressure (value: 1.85)\n  3. Patient age (value: 1.19)\n\nFactors DECREASING risk:\n  1. Exercise-induced angina (value: -0.74)"
+  },
+  "clinical_data": {
+    "symptoms": [
+      {
+        "symptom": "chest pain",
+        "radiation": "left arm",
+        "onset": "acute"
+      },
+      {
+        "symptom": "chest pain",
+        "radiation": "left arm",
+        "onset": "acute"
+      },
+      {
+        "symptom": "dyspnea"
+      },
+      {
+        "symptom": "edema"
+      }
+    ],
+    "risk_factors": [
+      {
+        "factor": "hypertension",
+        "controlled": false
+      },
+      {
+        "factor": "diabetes",
+        "insulin_treated": true
+      },
+      {
+        "factor": "smoking"
+      },
+      {
+        "factor": "hyperlipidemia"
+      }
+    ],
+    "investigations": [
+      {
+        "test_type": "BNP",
+        "value": 450.0,
+        "unit": "pg/mL",
+        "ref_upper_limit": 100
+      },
+      {
+        "test_type": "creatinine",
+        "value": 1.2,
+        "unit": "mg/dL",
+        "ref_upper_limit": 1.3
+      },
+      {
+        "test_type": "blood_pressure",
+        "systolic": 165,
+        "diastolic": 95,
+        "unit": "mmHg"
+      },
+      {
+        "test_type": "ecg",
+        "findings": [
+          "ST elevation in",
+          "new LBBB"
+        ]
+      },
+      {
+        "test_type": "echo",
+        "ejection_fraction": 0.28,
+        "wall_motion": "global hypokinesis"
+      }
+    ],
+    "medications": [
+      {
+        "drug": "lisinopril"
+      },
+      {
+        "drug": "atorvastatin"
+      },
+      {
+        "drug": "atorvastatin",
+        "dose": "80 mg",
+        "frequency": "daily"
+      },
+      {
+        "drug": "lisinopril",
+        "dose": "20 mg",
+        "frequency": "daily"
+      },
+      {
+        "drug": "aspirin",
+        "dose": "81 mg",
+        "frequency": "daily"
+      }
+    ]
+  },
+  "clinical_assessment": "Could not generate reasoning",
+  "safety_assessment": {
+    "red_flags": [
+      "HIGH PERIOPERATIVE RISK IDENTIFIED - Cardiology consultation strongly recommended",
+      "EF <35% - High risk for perioperative complications"
+    ],
+    "missing_evaluations": [
+      "Troponin level (rule out acute coronary syndrome)"
+    ],
+    "warnings": [
+      "Severely reduced EF (28%) - very high perioperative risk",
+      "Multiple major cardiovascular risk factors - high event probability"
+    ],
+    "status": "\u26a0\ufe0f REVIEW NEEDED",
+    "risk_informed": true
+  },
+  "physician_actions": [
+    "1. \u26a0\ufe0f HIGH RISK IDENTIFIED - Urgent cardiology consultation recommended",
+    "2. Perform comprehensive preoperative cardiac evaluation if surgery planned",
+    "3. Consider non-invasive stress testing or coronary angiography",
+    "4. Optimize cardiac medications before elective procedures",
+    "5. Plan for intensive perioperative monitoring",
+    "\n6. \ud83d\udea9 CRITICAL: Address 2 red flag(s) before proceeding",
+    "\n7. \ud83d\udccb Obtain 1 missing evaluation(s)",
+    "\n8. Review all risk assessment details and SHAP explanations",
+    "9. Make final diagnosis and treatment decisions based on clinical judgment",
+    "10. Document risk assessment results and decision-making rationale"
+  ],
+  "metadata": {
+    "system_version": "Doctor Copilot v1.1 (with Risk Assessment)",
+    "components_used": [
+      "BioBERT NER",
+      "RCRI Scoring",
+      "ML Models",
+      "SHAP Explainability",
+      "RAG Guidelines",
+      "Gemini-2.0-Flash"
+    ],
+    "quality_notes": "This system provides probabilistic, explainable support informed by cardiac risk assessment - not definitive conclusions"
+  }
+}

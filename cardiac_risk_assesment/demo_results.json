@@ -1,0 +1,343 @@
+{
+  "assessment_results": [
+    {
+      "patient_id": "DEMO-001",
+      "rcri": {
+        "rcri_score": 0,
+        "rcri_risk_class": "low",
+        "rcri_event_rate": 0.4,
+        "rcri_description": "Very low risk",
+        "factors_present": [],
+        "total_factors": 0,
+        "summary": "RCRI score: 0/6 (Very low risk)\nEstimated cardiac event rate: 0.4%\n\nNo RCRI risk factors present."
+      },
+      "ml_prediction": {
+        "ml_risk_probability": 0.04998105536670497,
+        "ml_risk_class": "low",
+        "ml_risk_percentage": 4.998105536670497,
+        "logistic_probability": 0.07959778710248094,
+        "xgb_probability": 0.020364323630928993
+      },
+      "shap_explanation": {
+        "top_features": {
+          "is_male": {
+            "shap_value": -1.13547682762146,
+            "feature_value": -1.9379255804998177,
+            "abs_shap": 1.13547682762146
+          },
+          "chol": {
+            "shap_value": -0.996549665927887,
+            "feature_value": 0.011446607074806468,
+            "abs_shap": 0.996549665927887
+          },
+          "age": {
+            "shap_value": -0.6767519116401672,
+            "feature_value": -0.9316798675165839,
+            "abs_shap": 0.6767519116401672
+          },
+          "exang_binary": {
+            "shap_value": -0.5008091330528259,
+            "feature_value": -0.7446337481515315,
+            "abs_shap": 0.5008091330528259
+          },
+          "thalch": {
+            "shap_value": -0.47444480657577515,
+            "feature_value": 1.0700982336231708,
+            "abs_shap": 0.47444480657577515
+          }
+        },
+        "positive_contributors": {},
+        "negative_contributors": {
+          "is_male": {
+            "shap_value": -1.13547682762146,
+            "feature_value": -1.9379255804998177,
+            "abs_shap": 1.13547682762146
+          },
+          "chol": {
+            "shap_value": -0.996549665927887,
+            "feature_value": 0.011446607074806468,
+            "abs_shap": 0.996549665927887
+          },
+          "age": {
+            "shap_value": -0.6767519116401672,
+            "feature_value": -0.9316798675165839,
+            "abs_shap": 0.6767519116401672
+          },
+          "exang_binary": {
+            "shap_value": -0.5008091330528259,
+            "feature_value": -0.7446337481515315,
+            "abs_shap": 0.5008091330528259
+          },
+          "thalch": {
+            "shap_value": -0.47444480657577515,
+            "feature_value": 1.0700982336231708,
+            "abs_shap": 0.47444480657577515
+          }
+        },
+        "explanation_text": "\nFactors DECREASING risk:\n  1. Male sex (value: -1.94)\n  2. Cholesterol level (value: 0.01)\n  3. Patient age (value: -0.93)",
+        "base_value": 0.0,
+        "shap_values_array": [
+          -0.6767519116401672,
+          -1.13547682762146,
+          0.30576837062835693,
+          -0.5008091330528259,
+          -0.026601575314998627,
+          -0.2061530500650406,
+          -0.47444480657577515,
+          0.003957877866923809,
+          -0.996549665927887,
+          -0.07703620195388794,
+          0.0035357477609068155,
+          -0.021697169169783592,
+          -0.0172506682574749,
+          0.0022065951488912106,
+          -0.018065081909298897
+        ]
+      },
+      "combined_assessment": {
+        "overall_risk_class": "low",
+        "confidence": "high",
+        "recommendation": "Patient is suitable for surgery with standard perioperative care.",
+        "agreement": true
+      },
+      "timestamp": "2026-01-27 22:09:56"
+    },
+    {
+      "patient_id": "DEMO-002",
+      "rcri": {
+        "rcri_score": 1,
+        "rcri_risk_class": "intermediate",
+        "rcri_event_rate": 0.9,
+        "rcri_description": "Low risk",
+        "factors_present": [
+          {
+            "factor": "Diabetes on insulin",
+            "description": "Preoperative insulin therapy"
+          }
+        ],
+        "total_factors": 1,
+        "summary": "RCRI score: 1/6 (Low risk)\nEstimated cardiac event rate: 0.9%\n\nRisk factors present (1):\n1. Diabetes on insulin - Preoperative insulin therapy\n"
+      },
+      "ml_prediction": {
+        "ml_risk_probability": 0.7547675597877246,
+        "ml_risk_class": "high",
+        "ml_risk_percentage": 75.47675597877246,
+        "logistic_probability": 0.6846546984137977,
+        "xgb_probability": 0.8248804211616516
+      },
+      "shap_explanation": {
+        "top_features": {
+          "age": {
+            "shap_value": 0.7486724853515625,
+            "feature_value": 0.8683474070587394,
+            "abs_shap": 0.7486724853515625
+          },
+          "oldpeak": {
+            "shap_value": 0.7160474061965942,
+            "feature_value": 0.8570332771969955,
+            "abs_shap": 0.7160474061965942
+          },
+          "has_angina": {
+            "shap_value": 0.4733726680278778,
+            "feature_value": -0.5521576303742327,
+            "abs_shap": 0.4733726680278778
+          },
+          "exang_binary": {
+            "shap_value": -0.37800469994544983,
+            "feature_value": -0.7446337481515315,
+            "abs_shap": 0.37800469994544983
+          },
+          "thalch": {
+            "shap_value": -0.3461315333843231,
+            "feature_value": -0.11452597488253517,
+            "abs_shap": 0.3461315333843231
+          }
+        },
+        "positive_contributors": {
+          "age": {
+            "shap_value": 0.7486724853515625,
+            "feature_value": 0.8683474070587394,
+            "abs_shap": 0.7486724853515625
+          },
+          "oldpeak": {
+            "shap_value": 0.7160474061965942,
+            "feature_value": 0.8570332771969955,
+            "abs_shap": 0.7160474061965942
+          },
+          "has_angina": {
+            "shap_value": 0.4733726680278778,
+            "feature_value": -0.5521576303742327,
+            "abs_shap": 0.4733726680278778
+          }
+        },
+        "negative_contributors": {
+          "exang_binary": {
+            "shap_value": -0.37800469994544983,
+            "feature_value": -0.7446337481515315,
+            "abs_shap": 0.37800469994544983
+          },
+          "thalch": {
+            "shap_value": -0.3461315333843231,
+            "feature_value": -0.11452597488253517,
+            "abs_shap": 0.3461315333843231
+          }
+        },
+        "explanation_text": "Factors INCREASING risk:\n  1. Patient age (value: 0.87)\n  2. ST depression (value: 0.86)\n  3. History of angina (value: -0.55)\n\nFactors DECREASING risk:\n  1. Exercise-induced angina (value: -0.74)\n  2. Maximum heart rate (value: -0.11)",
+        "base_value": 0.0,
+        "shap_values_array": [
+          0.7486724853515625,
+          0.1736869215965271,
+          0.4733726680278778,
+          -0.37800469994544983,
+          0.00236925994977355,
+          -0.055748529732227325,
+          -0.3461315333843231,
+          0.7160474061965942,
+          0.11737819761037827,
+          0.14288626611232758,
+          0.00288088945671916,
+          -0.015394114889204502,
+          0.01628682389855385,
+          0.003074002917855978,
+          -0.013578800484538078
+        ]
+      },
+      "combined_assessment": {
+        "overall_risk_class": "high",
+        "confidence": "moderate",
+        "recommendation": "Strongly consider cardiology consultation. May need stress testing or coronary angiography before high-risk surgery.",
+        "agreement": false
+      },
+      "timestamp": "2026-01-27 22:09:56"
+    },
+    {
+      "patient_id": "DEMO-003",
+      "rcri": {
+        "rcri_score": 5,
+        "rcri_risk_class": "high",
+        "rcri_event_rate": 11.0,
+        "rcri_description": "High risk",
+        "factors_present": [
+          {
+            "factor": "High-risk surgery",
+            "description": "Intraperitoneal, intrathoracic, or suprainguinal vascular"
+          },
+          {
+            "factor": "Ischemic heart disease",
+            "description": "History of MI, positive stress test, or angina"
+          },
+          {
+            "factor": "Heart failure",
+            "description": "History of CHF, pulmonary edema, or PND"
+          },
+          {
+            "factor": "Diabetes on insulin",
+            "description": "Preoperative insulin therapy"
+          },
+          {
+            "factor": "Renal insufficiency",
+            "description": "Creatinine 2.3 mg/dL (> 2.0)"
+          }
+        ],
+        "total_factors": 5,
+        "summary": "RCRI score: 5/6 (High risk)\nEstimated cardiac event rate: 11.0%\n\nRisk factors present (5):\n1. High-risk surgery - Intraperitoneal, intrathoracic, or suprainguinal vascular\n2. Ischemic heart disease - History of MI, positive stress test, or angina\n3. Heart failure - History of CHF, pulmonary edema, or PND\n4. Diabetes on insulin - Preoperative insulin therapy\n5. Renal insufficiency - Creatinine 2.3 mg/dL (> 2.0)\n"
+      },
+      "ml_prediction": {
+        "ml_risk_probability": 0.8816943035423979,
+        "ml_risk_class": "high",
+        "ml_risk_percentage": 88.16943035423978,
+        "logistic_probability": 0.9214710326791257,
+        "xgb_probability": 0.8419175744056702
+      },
+      "shap_explanation": {
+        "top_features": {
+          "thalch": {
+            "shap_value": 0.8771417140960693,
+            "feature_value": -1.2991501833882413,
+            "abs_shap": 0.8771417140960693
+          },
+          "has_angina": {
+            "shap_value": -0.8075311183929443,
+            "feature_value": 1.8110770276274832,
+            "abs_shap": 0.8075311183929443
+          },
+          "oldpeak": {
+            "shap_value": 0.7011469006538391,
+            "feature_value": 2.1529644843717257,
+            "abs_shap": 0.7011469006538391
+          },
+          "exang_binary": {
+            "shap_value": 0.6554380655288696,
+            "feature_value": 1.342942087277653,
+            "abs_shap": 0.6554380655288696
+          },
+          "trestbps": {
+            "shap_value": 0.4188198447227478,
+            "feature_value": 1.5661352679159923,
+            "abs_shap": 0.4188198447227478
+          }
+        },
+        "positive_contributors": {
+          "thalch": {
+            "shap_value": 0.8771417140960693,
+            "feature_value": -1.2991501833882413,
+            "abs_shap": 0.8771417140960693
+          },
+          "oldpeak": {
+            "shap_value": 0.7011469006538391,
+            "feature_value": 2.1529644843717257,
+            "abs_shap": 0.7011469006538391
+          },
+          "exang_binary": {
+            "shap_value": 0.6554380655288696,
+            "feature_value": 1.342942087277653,
+            "abs_shap": 0.6554380655288696
+          },
+          "trestbps": {
+            "shap_value": 0.4188198447227478,
+            "feature_value": 1.5661352679159923,
+            "abs_shap": 0.4188198447227478
+          }
+        },
+        "negative_contributors": {
+          "has_angina": {
+            "shap_value": -0.8075311183929443,
+            "feature_value": 1.8110770276274832,
+            "abs_shap": 0.8075311183929443
+          }
+        },
+        "explanation_text": "Factors INCREASING risk:\n  1. Maximum heart rate (value: -1.30)\n  2. ST depression (value: 2.15)\n  3. Exercise-induced angina (value: 1.34)\n\nFactors DECREASING risk:\n  1. History of angina (value: 1.81)",
+        "base_value": 0.0,
+        "shap_values_array": [
+          -0.14685595035552979,
+          0.13233427703380585,
+          -0.8075311183929443,
+          0.6554380655288696,
+          -0.024934513494372368,
+          0.4188198447227478,
+          0.8771417140960693,
+          0.7011469006538391,
+          -0.17902885377407074,
+          0.07017001509666443,
+          -0.008960632607340813,
+          -0.003411725163459778,
+          0.011478319764137268,
+          0.020927194505929947,
+          -0.00613982742652297
+        ]
+      },
+      "combined_assessment": {
+        "overall_risk_class": "high",
+        "confidence": "high",
+        "recommendation": "Strongly consider cardiology consultation. May need stress testing or coronary angiography before high-risk surgery.",
+        "agreement": true
+      },
+      "timestamp": "2026-01-27 22:10:44"
+    }
+  ],
+  "metadata": {
+    "system_version": "1.0",
+    "model_type": "RCRI + ML Ensemble + SHAP",
+    "description": "Cardiac risk assessment demonstration results"
+  }
+}
